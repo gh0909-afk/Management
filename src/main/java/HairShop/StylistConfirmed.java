@@ -1,6 +1,6 @@
 package HairShop;
 
-public class TimeSelected extends AbstractEvent {
+public class StylistConfirmed extends AbstractEvent {
 
     private Long id;
     private Integer manageId;
@@ -8,7 +8,7 @@ public class TimeSelected extends AbstractEvent {
     private Integer reserveId;
     private String reserveTime;
 
-    public TimeSelected(){
+    public StylistConfirmed(){
         super();
     }
 
@@ -40,7 +40,7 @@ public class TimeSelected extends AbstractEvent {
     public void setReserveId(Integer reserveId) {
         this.reserveId = reserveId;
     }
-    public String getReserveTie() {
+    public String getReserveTime() {
         return reserveTime;
     }
 

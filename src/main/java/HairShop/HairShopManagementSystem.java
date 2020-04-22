@@ -8,7 +8,10 @@ import java.util.List;
 @Table(name="HairShopManagementSystem_table")
 public class HairShopManagementSystem {
 
-    private Integer manageId;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long manageId;
     private String stylist;
     private Integer reserveId;
     private String reserveTime;
@@ -28,15 +31,6 @@ public class HairShopManagementSystem {
         BeanUtils.copyProperties(this, stylistConfirmed);
         stylistConfirmed.publish();
 
-        //Following code causes dependency to external APIs
-        // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
-
-        HairShop.external.HairShopManagementSystem hairShopManagementSystem = new HairShop.external.HairShopManagementSystem();
-        // mappings goes here
-        Application.applicationContext.getBean(HairShop.external.HairShopManagementSystemService.class)
-            .stylistSelection(hairShopManagementSystem);
-
-
     }
 
     @PostRemove
@@ -49,11 +43,11 @@ public class HairShopManagementSystem {
     }
 
 
-    public Integer getManageId() {
+    public Long getManageId() {
         return manageId;
     }
 
-    public void setManageId(Integer manageId) {
+    public void setManageId(Long manageId) {
         this.manageId = manageId;
     }
     public String getStylist() {

@@ -24,9 +24,9 @@ public class ReservationStatusViewHandler {
                 // view 객체 생성
                 ReservationStatus reservationStatus = new ReservationStatus();
                 // view 객체에 이벤트의 Value 를 set 함
-                reservationStatus.setStylistId(timeSelected.getStylist);
-                reservationStatus.setTime(timeSelected.getReserveTie);
-                reservationStatus.setViewReverveId(timeSelected.getReserveId);
+                reservationStatus.setStylistId(timeSelected.getStylist());
+                reservationStatus.setTime(timeSelected.getReserveTie());
+                reservationStatus.setViewReverveId(timeSelected.getReserveId());
                 // view 레파지 토리에 save
                 reservationStatusRepository.save(reservationStatus);
             }
@@ -42,7 +42,7 @@ public class ReservationStatusViewHandler {
         try {
             if (reservationCanceled.isMe()) {
                 // view 레파지 토리에 삭제 쿼리
-                reservationStatusRepository.deleteById(reservationCanceled.getReserveId);
+                //reservationStatusRepository.deleteById(reservationCanceled.getReserveId());
             }
         }catch (Exception e){
             e.printStackTrace();
