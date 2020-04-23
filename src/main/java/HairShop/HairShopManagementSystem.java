@@ -18,18 +18,25 @@ public class HairShopManagementSystem {
 
     @PostPersist
     public void onPostPersist(){
-        TimeSelected timeSelected = new TimeSelected();
-        BeanUtils.copyProperties(this, timeSelected);
-        timeSelected.publish();
+        StylistConfirmed stylistConfirmed = new StylistConfirmed();
+        BeanUtils.copyProperties(this, stylistConfirmed);
+        stylistConfirmed.publish();
 
+        HrSystem hrSystem = new HrSystem();
+        hrSystem.setStylistName(this.stylist);
+        // mappings goes here
+
+        //스타일리스트 정보 확인
+        HrSystemService hrSystemService = Application.applicationContext.getBean(HrSystemService.class);
+        HrSystemService.selectStylist(hrSystem);
 
     }
 
     @PostUpdate
     public void onPostUpdate(){
-        StylistConfirmed stylistConfirmed = new StylistConfirmed();
-        BeanUtils.copyProperties(this, stylistConfirmed);
-        stylistConfirmed.publish();
+        TimeSelected timeSelected = new TimeSelected();
+        BeanUtils.copyProperties(this, timeSelected);
+        timeSelected.publish();
 
     }
 

@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Service
-@FeignClient(name ="hrSystems", url="http://localhost:8084")
+@FeignClient(name ="hrSystems", url="http://52.231.118.11:8080")
 public interface HrSystemService {
 
-    @RequestMapping(method = RequestMethod.POST, value = "/paymentSystems", consumes = "application/json")
-    void selectStylist(HrSystem hrSystem);
+    @RequestMapping(method = RequestMethod.POST, value = "/hrSystems", consumes = "application/json")
+    static void selectStylist(HrSystem hrSystem) {
+        System.out.print("스타일리스트 시간 확인");
+    }
 
 }
