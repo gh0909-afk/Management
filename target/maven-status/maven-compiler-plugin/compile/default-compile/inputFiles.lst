@@ -1,5 +1,7 @@
 D:\Management\src\main\java\HairShop\ReservationStatusViewHandler.java
 D:\Management\src\main\java\HairShop\ReservationCanceled.java
+D:\Management\src\main\java\HairShop\HrSystemService.java
+D:\Management\src\main\java\HairShop\Reserved.java
 D:\Management\src\main\java\HairShop\Application.java
 D:\Management\src\main\java\HairShop\HairShopManagementSystemRepository.java
 D:\Management\src\main\java\HairShop\AbstractEvent.java
@@ -7,6 +9,7 @@ D:\Management\src\main\java\HairShop\HairShopManagementSystem.java
 D:\Management\src\main\java\HairShop\PolicyHandler.java
 D:\Management\src\main\java\HairShop\StylistConfirmed.java
 D:\Management\src\main\java\HairShop\TimeSelected.java
+D:\Management\src\main\java\HairShop\HrSystem.java
 D:\Management\src\main\java\HairShop\HairShopManagementSystemController.java
 D:\Management\src\main\java\HairShop\ReservationStatus.java
 D:\Management\src\main\java\HairShop\config\kafka\KafkaProcessor.java
