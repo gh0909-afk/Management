@@ -24,11 +24,12 @@ public class HairShopManagementSystem {
 
         HrSystem hrSystem = new HrSystem();
         hrSystem.setStylistName(this.stylist);
+
         // mappings goes here
 
         //스타일리스트 정보 확인
         HrSystemService hrSystemService = Application.applicationContext.getBean(HrSystemService.class);
-        HrSystemService.selectStylist(hrSystem);
+        //HrSystemService.selectStylist(hrSystem);
 
     }
 

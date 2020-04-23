@@ -24,7 +24,7 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void wheneverReserved_예약받음(@Payload Reserved reserved){
 
-        System.out.println("여기 들어오나?");
+
 
         if(reserved.isMe()){
             System.out.println("##### listener 예약 : " + reserved.toJson());

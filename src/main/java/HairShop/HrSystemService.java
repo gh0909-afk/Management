@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface HrSystemService {
 
     @RequestMapping(method = RequestMethod.POST, value = "/hrSystems", consumes = "application/json")
-    static void selectStylist(HrSystem hrSystem) {
-        System.out.print("스타일리스트 시간 확인");
-    }
+    void selectStylist(HrSystem hrSystem);
 
 }
